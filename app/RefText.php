@@ -71,7 +71,7 @@ class RefText
         $diario = $request->get('diario') . ', ';
         $diariosec = 'Seção ' . $request->get('diariosec') . '. ';
         $lawdate = $request->get('lawdate') . '. ';
-        $link = 'Disponível em: <' . $request->get('link') . '>. ';
+        $link = 'Disponível em: &lt' . $request->get('link') . '&gt. ';
         $accessdate = 'Acesso em: ' . $request->get('accessdate') . '. ';
         $softname = $request->get('softname') . '. ';
         $softversion = 'Versão ' . $request->get('softversion');
@@ -117,9 +117,9 @@ class RefText
             case 26:
                 return '<div>' . $names . '<strong>' . $title . '</strong>' . 'Apostila do Curso de ' . $course . ' na ' . $institution . $year . '</div>';
             case 52:
-                return '<div>' . $names . '<strong>' . $title . '</strong>' . $location . ': ' . $year . $pages . '</div>';
+                return '<div>' . $names . '<strong>' . $title . '</strong>' . $location . ': ' . $year .'</div>';
             case 53:
-                return '<div>' . strtoupper($corporation) . '<strong>' . $title . '</strong>' . $location . ': ' . $year . $pages . '</div>';
+                return '<div>' . strtoupper($corporation) . '<strong>' . $title . '</strong>' . $location . ': ' . $year .'</div>';
             case 28:
                 return '<div>' . strtoupper($corporation) . '<strong>' . $title . '</strong>' . $location . ', ' . $year . '</div>';
             case 30:

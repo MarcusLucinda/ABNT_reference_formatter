@@ -91,6 +91,7 @@ class Formats
             case 2:
                 return $title . $edition . $location . $publisher . $year . '</div>';
             case 28:
+            case 53:
             case 3:
                 return '<div class="form-row">' . $corporation . $title . $location . $year . '</div>';
             case 4:
@@ -126,9 +127,7 @@ class Formats
             case 26:
                 return $title . $location . $course . $institution . $year . '</div>';
             case 52:
-                return $title . $location . $year . $pages . '</div>';
-            case 53:
-                return '<div class="form-row">' . $corporation . $title . $location . $year . $pages . '</div>';
+                return $title . $location . $year . '</div>';
             case 30:
                 return $title . $location . $publisher . $year . '</div>';
             case 31:
